@@ -10,7 +10,7 @@ const lookup = {
   'Y': 'L','Z': 'M', '?': '?', ',': ','
 };
 
-function rot13(encodedStr){
+function rot13(str){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
 
