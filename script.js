@@ -11,19 +11,17 @@ const lookup = {
 };
 
 function rot13(str){
-   let decodedArr = []; // Your Result goes here
-  // Only change code below this line
+   let decoderArr = [];
+	for(let i=0;i<str.length;i++){
+		if(lookup[str[i]] === undefined){
+			decoderArr.push(str[i]);
+		}
+		else{
+			decoderArr.push(lookup[str[i]]);
+		}
+	}
+	return decoderArr;
 
-	 var string = "";
-	for(var i = 0; i < str.length; i++) {
-    var temp = str.charAt(i);
-    if(temp !== " " || temp!== "!" || temp!== "?") {
-       string += String.fromCharCode(13 + String.prototype.charCodeAt(temp));
-    } else {
-      string += temp;
-    }
-  }
-  return ;//return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
